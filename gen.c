@@ -764,7 +764,7 @@ static void rp_ser(struct runparms *rp, struct genparms *gp, FILE *fp){
 			if(gp->bsizes){
 				for(int k=gp->bsizes[0];k<=e;k+=gp->bsizes[++block]);
 			}
-			fprintf(fp, "%d\t%d\t%d", i, j, block);
+			fprintf(fp, "%d\t%d\t%d", i, block, j);
 			for(int k=0;k<rp->mat_cnt;k++){
 				fprintf(fp, "\t%d", MGET(rp->mats[k], i, j));
 			}
